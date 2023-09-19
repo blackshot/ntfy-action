@@ -1,6 +1,5 @@
 const core = require('@actions/core');
 const axios = require('axios');
-const github = require('@actions/github');
 
 async function run() {
     try {
@@ -23,7 +22,7 @@ async function run() {
         })
         core.info('Sending data ...')
         core.info(data)
-        
+
 
         const response = await axios({
             method: 'POST',
