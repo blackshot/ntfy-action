@@ -17,6 +17,7 @@ This is currently only available for `push`, `release`, `schedule`, `workflow`, 
 |priority|No| Message priority   |`5`. Default is 3.
 |details|No| Additional text after the notification message.   |`Workflow has failed!`. Default is None.
 |headers|No| Addition Headers     |`{"authorization": "Basic 123456"}`
+|actions|No| json list of actions | `[{"action": "view", "label": "ver CI/CD", "url": "https://my-custom-git-instance.com/"}]`
 
 **Note**: If you are using CloudFlare infront of your ntfy server, you should turn off `Bot Fight Mode` in `Security->Bots`. Otherwise you probably will get 503 status.
 

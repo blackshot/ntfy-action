@@ -25,15 +25,9 @@ inputs:
   priority:
     description: Message priority.
     required: false
-  #data:
-  #  description: 'Form data'
-  #  required: false
-  #name:
-  #  description: 'File name'
-  #  required: false
-  #file:
-  #  description: 'File path'
-  #  required: false
+  actions:
+    description: Json list of actions (see ntfy documentation).
+    required: false
 outputs:
   response:
     description: 'The response of POST request'
