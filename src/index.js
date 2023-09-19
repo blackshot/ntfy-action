@@ -14,6 +14,17 @@ async function run() {
 
         core.info(`Connecting to endpoint (${url}) ...`)
 
+        const data = JSON.stringify({
+            'topic': topic,
+            'tags': tags,
+            'title': (title),
+            'actions': actions,
+            "message": core.getInput('details')
+        })
+        core.info('Sending data ...')
+        core.info(data)
+        
+
         const response = await axios({
             method: 'POST',
             url: url,
@@ -23,14 +34,7 @@ async function run() {
                 'Priority': priority,
                 ...headers
             },
-            data: JSON.stringify({
-                'topic': topic,
-                'tags': tags,
-                'title': (title),
-                'actions': actions,
-                "message": core.getInput('details')
-            })
-
+            data: data
         })
 
         core.setOutput('response', {
